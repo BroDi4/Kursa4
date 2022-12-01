@@ -7,14 +7,43 @@
     <style>.field{width:180px;}</style>
 </head>
 <body>
-    <h1>Редактирование пользователя</h1>
-     <form action="/edit" method="POST">
+    <div class="container d-flex justify-content-center">
+        <form action="/edit" method="POST" class="col-5 shadow p-4 mt-4">
+            <h1>Редактирование записи</h1>
+            <input type="hidden" name="id" value="{{user.id}}" class="form-label" />
+            <div class="mb-3">
+                <label for="date" class="form-label">Дата</label>
+                <input name="date" class="form-control" value="{{user.Дата}}"/>
+            </div>
+            <div class="mb-3">
+                <label>Услуга</label>
+                <input name="service" type="number" class="form-control" value="{{user.id_услуга}}"/>
+            </div>
+            <div class="mb-3">
+                <label>Сотрудник</label>
+                <input name="employer" class="form-control" type="number" value="{{user.id_сотрудник}}"/>
+            </div>
+            <div class="mb-3">
+                <label>Клиент</label>
+                <input name="customer" class="form-control" type="number" value="{{user.id_клиент}}"/>
+            </div>
+            <div class="mb-3">
+                <label>Филиал</label>
+                <input name="branch" class="form-control" type="number" value="{{user.id_филиал}}"/>
+            </div>
+            <input type="submit" value="Отправить" class="btn btn-primary mb-3" />
+            <div>
+                <a href="/">К списку пользователей</a>
+            </div>
+            
+        </form>
+     {{!-- <form action="/edit" method="POST">
         <input type="hidden" name="id" value="{{user.id}}" />
         <label>Имя</label><br>
-        <input name="name" value="{{user.name}}"  class="field" /><br><br>
+        <input name="name" value="{{user.Дата}}"  class="field" /><br><br>
         <label>Возраст</label><br>
-        <input name="age" type="number" min="1" max="110" value="{{user.age}}"  class="field" /><br><br>
+        <input name="age" type="number" min="1" max="110" value="{{user.id_услуга}}"  class="field" /><br><br>
         <input type="submit" value="Отправить" />
      </form>
-     <a href="/">К списку пользователей</a>
+     <a href="/">К списку пользователей</a> --}}
 </body>

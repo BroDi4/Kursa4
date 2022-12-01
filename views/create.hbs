@@ -4,23 +4,39 @@
     <title>Добавление пользователя</title>
     <meta charset="utf-8" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <style>.field{width:180px;}</style>
 </head>
 <body>
-    <h1>Добавление пользователя</h1>
-     <form method="POST">
-        <label>Дата</label><br>
-        <input name="date" class="field"/><br><br>
-        <label>Услуга</label><br>
-        <input name="service" type="number" class="field"/><br><br>
-        <label>Сотрудник</label><br>
-        <input name="employer" class="field" type="number"/><br><br>
-        <label>Клиент</label><br>
-        <input name="customer" class="field" type="number"/><br><br>
-        <label>Филиал</label><br>
-        <input name="branch" class="field" type="number"/><br><br>
-        <input type="submit" value="Отправить" />
-     </form>
-     <a href="/">К списку пользователей</a>
+    <div class="container d-flex justify-content-center">
+        <form method="POST" class="col-5 shadow p-4 mt-4">
+            <h1>Добавление записи</h1>
+            <div class="mb-3">
+                <label for="date" class="form-label">Дата</label>
+                <input name="date" class="form-control"/>
+            </div>
+            <div class="mb-3">
+                <label>Услуга</label>
+                <input name="service" type="number" class="form-control"/>
+            </div>
+            <div class="mb-3">
+                <label>Сотрудник</label>
+                <input name="employer" class="form-control" type="number"/>
+            </div>
+            <div class="mb-3">
+                <label>Клиент</label>
+                <input name="customer" class="form-control" type="number"/>
+            </div>
+            <div class="mb-3">
+                <label>Филиал</label>
+                <input name="branch" class="form-control" type="number"/>
+            </div>
+            <input type="submit" value="Отправить" class="btn btn-primary mb-3" />
+            <div>
+                <a href="/">К списку пользователей</a>
+            </div>
+            
+        </form>
+        
+    </div>
+    
 </body>
 <html>
